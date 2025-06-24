@@ -29,10 +29,17 @@ public class BurgerTest {
         assertEquals(bun, burger.bun);
     }
 
+    // Был один тест — стал два
+
     @Test
-    public void testAddIngredient() {
+    public void testAddIngredientIncreasesSize() {
         burger.addIngredient(ingredient1);
         assertEquals(1, burger.ingredients.size());
+    }
+
+    @Test
+    public void testAddIngredientAddsCorrectItem() {
+        burger.addIngredient(ingredient1);
         assertEquals(ingredient1, burger.ingredients.get(0));
     }
 
