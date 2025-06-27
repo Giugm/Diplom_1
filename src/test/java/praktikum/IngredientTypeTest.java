@@ -1,13 +1,19 @@
 package praktikum;
 
-import org.junit.*;
-
-import static org.junit.Assert.*;
+import org.junit.Test;
+import static org.junit.Assert.assertNotNull;
 
 public class IngredientTypeTest {
+
     @Test
-    public void testEnumValues() {
-        assertNotNull(IngredientType.valueOf("SAUCE"));
-        assertNotNull(IngredientType.valueOf("FILLING"));
+    public void checkSauceEnumValueExists() {
+        // Проверяем, что значение SAUCE существует в перечислении
+        assertNotNull("The SAUCE enum value should exist.", IngredientType.valueOf("SAUCE"));
+    }
+
+    @Test
+    public void checkFillingEnumValueExists() {
+        // Проверяем, что значение FILLING существует в перечислении
+        assertNotNull("The FILLING enum value should exist.", IngredientType.valueOf("FILLING"));
     }
 }
